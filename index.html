@@ -98,6 +98,14 @@
     .quick-card p{font-size:.82rem;color:var(--muted);margin:5px 0 0}
     .quick-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
     .text-link{font-size:.78rem;font-weight:650;color:var(--indigo-700);text-decoration-thickness:1px;text-underline-offset:3px}
+    .day-overview{--overview-accent:var(--red);margin-bottom:38px}
+    .day-overview.day2-overview{--overview-accent:#5f826f}
+    .day-overview.day3-overview{--overview-accent:var(--indigo-800)}
+    .day-overview.day4-overview{--overview-accent:var(--gold)}
+    .day-overview .notice{box-shadow:inset 4px 0 0 var(--overview-accent),var(--shadow-soft)}
+    .day-overview .quick-grid{margin-bottom:0}
+    .day-overview .quick-card{border-top:3px solid var(--overview-accent)}
+    .day-overview .quick-card h2{color:var(--overview-accent)}
 
     .day-panel{animation:panel-in .25s ease both}
     .js .day-panel[hidden]{display:none}
@@ -331,18 +339,15 @@
   </div>
 
   <main class="shell" id="main">
-    <section class="notice" aria-labelledby="holiday-title">
-      <div class="notice-icon" aria-hidden="true">⚑</div>
-      <div><h2 id="holiday-title">9/23 是日本國定假日</h2><p>秋分之日，也是三連休最後一天。てんぷら 千の種已確認 19:00、2 位；若航班延誤，請先聯絡餐廳處理訂位，再決定是否改留在岡山站。</p></div>
-    </section>
-
-    <section class="quick-grid" aria-label="旅程快速資訊">
-      <article class="quick-card"><h2>住宿據點</h2><strong>Hotel Granvia Okayama</strong><p>岡山站直通。入住 9/23、退房 9/26 12:00 前；兩間相鄰房需求尚待聯絡飯店。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Granvia%20Okayama">開啟地圖</a><a class="text-link" href="tel:+81862347000">+81 86-234-7000</a></div></article>
-      <article class="quick-card"><h2>移動原則</h2><strong>JR／路面電車優先＋必要區段計程車</strong><p>跨城市以鐵道為主；只有機場無鐵道、兒島站到牛仔褲街約 2 公里，才使用巴士或計程車。</p></article>
-      <article class="quick-card"><h2>資訊狀態</h2><strong>D1 機場交通、D2 景點與咖啡更新：2026/7/27</strong><p>IT214／IT215 航站與夏季班表已核對；JR 依 2026/3/14 改點、路面電車依 2025/12/1 改點安排，9 月正式班次仍須出發前複核。</p></article>
-    </section>
-
     <section class="day-panel" id="day1" role="tabpanel" aria-labelledby="tab-day1" tabindex="0">
+      <div class="day-overview day1-overview">
+        <section class="notice" aria-labelledby="overview-day1-title"><div class="notice-icon" aria-hidden="true">⚑</div><div><h2 id="overview-day1-title">D1 重點｜順利進城，守住 19:00 晚餐</h2><p>9/23 是秋分之日，也是三連休最後一天。抵達後不跨區；若航班延誤，先聯絡千の種處理訂位，再決定是否改留岡山站。</p></div></section>
+        <section class="quick-grid" aria-label="第一日快速重點">
+          <article class="quick-card"><h2>抵達航班</h2><strong>IT214｜11:30 → 15:05</strong><p>桃園 T1 起飛，抵達岡山國際線；時間皆為日本當地時間。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://static.tigerairtw.com/www/events/2605TaiwanDay/">航班表</a></div></article>
+          <article class="quick-card"><h2>進城交通</h2><strong>15:55 巴士首選・16:55 備選</strong><p>機場 2 號乘車處上車；錯過首班時，依晚餐緩衝決定等車或搭計程車。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://okayama-kido.co.jp/bus/kuukou.html">機場巴士</a></div></article>
+          <article class="quick-card"><h2>固定預約</h2><strong>てんぷら 千の種｜19:00</strong><p>2 位已確認；18:35 從飯店出發、18:50 前抵達。</p><div class="quick-links"><a class="text-link" href="tel:+81862300896">086-230-0896</a></div></article>
+        </section>
+      </div>
       <header class="day-head"><div class="day-number">01</div><div><p class="day-overline">Wed · Autumnal Equinox Day</p><h2>抵達岡山・天婦羅百名店</h2><p class="day-summary">不安排跨區移動。第一晚已確認「てんぷら 千の種」19:00、2 位；抵達飯店後有充足休息與步行時間。航班嚴重延誤時，務必先聯絡餐廳處理訂位。</p></div></header>
       <section class="map-section" aria-labelledby="map-day1-title">
         <div class="map-section-head"><div><h3 id="map-day1-title">第一日路線</h3><p>免金鑰互動地圖；連線表示順序，精準班次以行程文字為準。</p></div></div>
@@ -377,6 +382,14 @@
     </section>
 
     <section class="day-panel" id="day2" role="tabpanel" aria-labelledby="tab-day2" tabindex="0" hidden>
+      <div class="day-overview day2-overview">
+        <section class="notice" aria-labelledby="overview-day2-title"><div class="notice-icon" aria-hidden="true">✦</div><div><h2 id="overview-day2-title">D2 重點｜庭園烏城＋Cloudmonster 3 Hyper</h2><p>上午完成岡山城、後樂園、岡山神社與咖啡；下午 16:10 前往 AEON 試鞋。表町是延誤時第一個縮短的區段。</p></div></section>
+        <section class="quick-grid" aria-label="第二日快速重點">
+          <article class="quick-card"><h2>核心順序</h2><strong>岡山城 → 後樂園 → 岡山神社</strong><p>08:30 搭路面電車出發；岡山城與後樂園聯票現場購買即可。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Okayama%20Castle&amp;destination=Okayama%20Korakuen&amp;travelmode=walking">步行路線</a></div></article>
+          <article class="quick-card"><h2>主要採買</h2><strong>16:10–17:10｜AEON 試鞋</strong><p>4F Mega Sports 優先看 Cloudmonster 3 Hyper；沒有尺寸再到 3F Murasaki。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://store.megasports.jp/shop/g/g86878733/">商品頁</a><a class="text-link" href="tel:+81868036341">先問庫存</a></div></article>
+          <article class="quick-card"><h2>晚餐任務</h2><strong>鮨 縁優先｜18:00 開席</strong><p>8/10 14:00 查看 9/24 兩席；無位即改詢松寿司、みや古。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://omakase.in/r/lw358143">OMAKASE</a></div></article>
+        </section>
+      </div>
       <header class="day-head"><div class="day-number">02</div><div><p class="day-overline">Thu · Okayama City</p><h2>岡山城・後樂園・岡山神社・咖啡</h2><p class="day-summary">依序走岡山城、後樂園、岡山神社，再到出石町咖啡休息；午餐順延至麵酒一照庵，午後表町慢逛。晚餐等待鮨 縁 9 月釋位，若 9/24 無席則依序詢問松寿司、みや古。</p></div></header>
       <section class="map-section" aria-labelledby="map-day2-title">
         <div class="map-section-head"><div><h3 id="map-day2-title">第二日景點順序</h3><p>免金鑰互動地圖；連線表示順序，精準班次以行程文字為準。</p></div></div>
@@ -417,6 +430,14 @@
     </section>
 
     <section class="day-panel" id="day3" role="tabpanel" aria-labelledby="tab-day3" tabindex="0" hidden>
+      <div class="day-overview day3-overview">
+        <section class="notice" aria-labelledby="overview-day3-title"><div class="notice-icon" aria-hidden="true">◆</div><div><h2 id="overview-day3-title">D3 重點｜丹寧試穿、倉敷黃昏、18:30 燒鳥</h2><p>上午把選購與修改褲長時間問清楚；下午先上阿智神社，再逛町家小店與倉敷川夜景。不要為追車壓縮已確認的晚餐。</p></div></section>
+        <section class="quick-grid" aria-label="第三日快速重點">
+          <article class="quick-card"><h2>丹寧主行程</h2><strong>09:05 JR → 10:00 MOMOTARO</strong><p>兒島站到牛仔褲街以計程車優先；先試版型尺寸，再確認修改褲長時間。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://momotarojeans.com/en/pages/stores">店舖資訊</a></div></article>
+          <article class="quick-card"><h2>跨城選擇</h2><strong>13:30 直達巴士／13:10 JR</strong><p>巴士免轉乘；JR 經岡山轉車但較不受道路壅塞影響。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://shimoden.net/rosen/rosen/amaki.html">巴士資訊</a></div></article>
+          <article class="quick-card"><h2>固定預約</h2><strong>かしわ屋 こばやし｜18:30</strong><p>2 位已確認，餐廳靠近倉敷站；18:10 從美觀地區前往。</p><div class="quick-links"><a class="text-link" href="tel:+81864214113">086-421-4113</a></div></article>
+        </section>
+      </div>
       <header class="day-head"><div class="day-number">03</div><div><p class="day-overline">Fri · Kojima &amp; Kurashiki</p><h2>兒島倉敷</h2><p class="day-summary">上午先到兒島完整試穿與選購，下午前往倉敷；抵達後先上鶴形山參拜阿智神社，再下山逛本町與東町小店，欣賞黃昏夜景並銜接已確認的晚餐。大原美術館保留為雨天／藝術備選。</p></div></header>
       <section class="map-section" aria-labelledby="map-day3-denim-title">
         <div class="map-section-head"><div><h3 id="map-day3-denim-title">第三日｜兒島倉敷</h3><p>拆分跨城與街區地圖，避免近距離標號重疊。</p></div></div>
@@ -466,6 +487,14 @@
     </section>
 
     <section class="day-panel" id="day4" role="tabpanel" aria-labelledby="tab-day4" tabindex="0" hidden>
+      <div class="day-overview day4-overview">
+        <section class="notice" aria-labelledby="overview-day4-title"><div class="notice-icon" aria-hidden="true">↗</div><div><h2 id="overview-day4-title">D4 重點｜不跨區，13:15 前抵達機場</h2><p>上午只在飯店與岡山站採買；拿行李後提早一班搭機場巴士，不以壓縮國際線報到時間換取購物。</p></div></section>
+        <section class="quick-grid" aria-label="第四日快速重點">
+          <article class="quick-card"><h2>退房與行李</h2><strong>12:00 前退房</strong><p>先整理護照、退稅商品與液體；寄放行李後只逛車站周邊。</p><div class="quick-links"><a class="text-link" href="tel:+81862347000">飯店電話</a></div></article>
+          <article class="quick-card"><h2>機場交通</h2><strong>12:30 前後由西口出發</strong><p>目標約 13:15 前抵達岡山機場；9 月正式班表公布後再鎖定班次。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://www.okayama-airport.org/access/bus">巴士時刻</a></div></article>
+          <article class="quick-card"><h2>返台航班</h2><strong>IT215｜15:55 → 17:40</strong><p>岡山國際線起飛、抵達桃園 T1；至少提前 2–2.5 小時到機場。</p><div class="quick-links"><a class="text-link" target="_blank" rel="noopener" href="https://www.okayama-airport.org/tw/facility">機場樓層</a></div></article>
+        </section>
+      </div>
       <header class="day-head"><div class="day-number">04</div><div><p class="day-overline">Sat · Return Home</p><h2>車站採買・從容返台</h2><p class="day-summary">上午只在飯店與車站周邊活動。機場巴士班次尚可能改動，核心原則是約 13:15 前抵達機場。</p></div></header>
       <section class="map-section" aria-labelledby="map-day4-title">
         <div class="map-section-head"><div><h3 id="map-day4-title">第四日回程順序</h3><p>免金鑰互動地圖；連線表示順序，機場巴士班次以行程文字為準。</p></div></div>
